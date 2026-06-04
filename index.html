@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EWPC 2026 — European Women's Programming Contest</title>
-<meta name="description" content="The European Women's Programming Contest (EWPC) 2026 — an individual programming contest in the ICPC sphere for women and non-binary students in Europe. Online qualifier July 4, finals August 21–24 in Stockholm, Sweden.">
+<meta name="description" content="The European Women's Programming Contest (EWPC) 2026 — an individual programming contest in the ICPC family for women and non-binary students in Europe. Online qualifier July 4, finals August 21–24 in Stockholm, Sweden.">
 <meta property="og:title" content="EWPC 2026 — European Women's Programming Contest">
 <meta property="og:description" content="Online qualifier July 4, 2026 · Onsite finals August 21–24, 2026, Stockholm, Sweden. Open to women and non-binary students in Europe.">
 <meta property="og:type" content="website">
@@ -159,8 +159,21 @@
   .news-item h3 { font-size: 1.15rem; color: var(--blue-deep); margin: 0.25rem 0 0.35rem; }
   .news-item p { font-size: 0.95rem; }
 
+  /* ---------- ICPC band ---------- */
+  .icpc-band {
+    background: var(--paper-tint);
+    border-bottom: 1px solid var(--line);
+    padding: 2rem 1.25rem;
+  }
+  .icpc-band .wrap {
+    display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;
+  }
+  .icpc-band img { height: 76px; width: auto; display: block; }
+  .icpc-band p { margin: 0; color: var(--ink-soft); max-width: 36em; font-size: 0.98rem; flex: 1; min-width: 260px; }
+  .icpc-band p strong { color: var(--ink); }
+
   /* ---------- Sponsors ---------- */
-  .sponsor-row { margin-top: 2rem; display: grid; gap: 1.2rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .sponsor-row { margin-top: 2rem; display: grid; gap: 1.2rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width: 520px; }
   .sponsor-card {
     background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
     padding: 2rem 1.5rem 1.7rem; text-align: center;
@@ -172,10 +185,6 @@
   }
   .sponsor-card a.logo-link { display: flex; align-items: center; justify-content: center; min-height: 80px; }
   .sponsor-card img { max-width: 260px; max-height: 64px; width: auto; height: auto; }
-  .sponsor-card.dark { background: var(--blue-deep); border-color: var(--blue-mid); }
-  .sponsor-card.dark .sponsor-label { color: var(--gold); }
-  .sponsor-card.dark img { max-height: 96px; }
-  .sponsor-card.dark p { color: #c9cfeb; }
   .sponsor-card p { font-size: 0.92rem; }
 
   /* ---------- Contact / footer ---------- */
@@ -245,7 +254,7 @@
         </g>
       </svg>
 
-      <span class="kicker">A contest in the ICPC sphere</span>
+      <span class="kicker">A contest in the ICPC family</span>
       <h1>European Women's Programming Contest <span class="year">2026</span></h1>
       <p class="lead">
         An individual algorithmic programming contest for women and non-binary students
@@ -264,6 +273,19 @@
     </div>
   </div>
 
+  <div class="icpc-band">
+    <div class="wrap">
+      <a href="https://icpc.global/" rel="noopener" aria-label="ICPC — International Collegiate Programming Contest">
+        <img src="https://icpc-apac-2025.vercel.app/assets/icpc-apac-logo/icpc-apac-logo-new-solid-dark-blue-thin.png" alt="ICPC — International Collegiate Programming Contest">
+      </a>
+      <p>
+        EWPC is an event in the <strong>ICPC family</strong> — the
+        International Collegiate Programming Contest, the oldest and most
+        prestigious programming contest in the world.
+      </p>
+    </div>
+  </div>
+
   <section id="about">
     <div class="wrap">
       <span class="section-kicker">About</span>
@@ -271,7 +293,7 @@
       <p>
         The <strong>European Women's Programming Contest (EWPC)</strong> is an
         <strong>individual</strong> competitive programming contest in the
-        <a href="https://icpc.global/" style="color: var(--blue);">ICPC</a> sphere.
+        <a href="https://icpc.global/" style="color: var(--blue);">ICPC</a> family.
         Contestants solve algorithmic problems against the clock — reading a problem,
         designing an efficient solution, and implementing it in code that is judged
         automatically.
@@ -382,8 +404,7 @@
       <span class="section-kicker">Sponsors</span>
       <h2>Our supporters</h2>
       <p>
-        EWPC is made possible by the generous support of our sponsors and the
-        ICPC community.
+        EWPC is made possible by the generous support of our sponsors.
       </p>
       <div class="sponsor-row">
         <div class="sponsor-card">
@@ -394,16 +415,6 @@
           <p>
             Jane Street is a research-driven trading firm with a unique focus on
             technology and collaborative problem solving.
-          </p>
-        </div>
-        <div class="sponsor-card dark">
-          <span class="sponsor-label">A contest in the ICPC sphere</span>
-          <a class="logo-link" href="https://icpc.global/" rel="noopener">
-            <img src="https://icpc.global/static/media/mainLogoMobile2026.273f1be9.png" alt="ICPC — International Collegiate Programming Contest" loading="lazy">
-          </a>
-          <p>
-            The International Collegiate Programming Contest — the oldest and
-            most prestigious programming contest in the world.
           </p>
         </div>
       </div>
@@ -445,7 +456,7 @@
 
 <footer>
   <div class="wrap">
-    <div>© 2026 European Women's Programming Contest · A contest in the <a href="https://icpc.global/">ICPC</a> sphere</div>
+    <div>© 2026 European Women's Programming Contest · A contest in the <a href="https://icpc.global/">ICPC</a> family</div>
     <div class="draft-note">Details on this page are preliminary and subject to change.</div>
   </div>
 </footer>
