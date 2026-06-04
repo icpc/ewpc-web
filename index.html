@@ -159,6 +159,25 @@
   .news-item h3 { font-size: 1.15rem; color: var(--blue-deep); margin: 0.25rem 0 0.35rem; }
   .news-item p { font-size: 0.95rem; }
 
+  /* ---------- Sponsors ---------- */
+  .sponsor-row { margin-top: 2rem; display: grid; gap: 1.2rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .sponsor-card {
+    background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 2rem 1.5rem 1.7rem; text-align: center;
+    display: flex; flex-direction: column; align-items: center; gap: 1.1rem;
+  }
+  .sponsor-card .sponsor-label {
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--violet);
+  }
+  .sponsor-card a.logo-link { display: flex; align-items: center; justify-content: center; min-height: 80px; }
+  .sponsor-card img { max-width: 260px; max-height: 64px; width: auto; height: auto; }
+  .sponsor-card.dark { background: var(--blue-deep); border-color: var(--blue-mid); }
+  .sponsor-card.dark .sponsor-label { color: var(--gold); }
+  .sponsor-card.dark img { max-height: 96px; }
+  .sponsor-card.dark p { color: #c9cfeb; }
+  .sponsor-card p { font-size: 0.92rem; }
+
   /* ---------- Contact / footer ---------- */
   .contact-box {
     margin-top: 1.6rem; display: inline-block;
@@ -198,6 +217,7 @@
       <a href="#dates">Key dates</a>
       <a href="#eligibility">Eligibility</a>
       <a href="#finals">Finals</a>
+      <a href="#sponsors">Sponsors</a>
       <a href="#news">News</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -265,7 +285,8 @@
         The contest has two stages: an <strong>online qualifier</strong> on July 4,
         2026, which anyone eligible can join from anywhere, and the
         <strong>onsite finals</strong> in Stockholm, Sweden on August 21–24, 2026,
-        to which the top contestants from the qualifier are invited.
+        to which the top 20 contestants from the qualifier are invited — with
+        travel and accommodation provided.
       </p>
     </div>
   </section>
@@ -280,8 +301,8 @@
           <h3>Online qualifier</h3>
           <div class="where">Online — compete from anywhere in Europe</div>
           <p>
-            An individual online round open to all eligible students. Results
-            determine who advances to the onsite finals.
+            An individual online round open to all eligible students. The top 20
+            contestants are invited to the onsite finals.
           </p>
         </div>
         <div class="event">
@@ -289,8 +310,9 @@
           <h3>Onsite finals</h3>
           <div class="where">Stockholm, Sweden</div>
           <p>
-            Four days of competition and community: the final contest round,
-            plus social activities with fellow contestants from across Europe.
+            Four days of competition and community for the 20 finalists: the
+            final contest round, plus social activities with fellow contestants
+            from across Europe. Travel and accommodation are provided.
           </p>
         </div>
       </div>
@@ -344,14 +366,47 @@
       <h2>Finals in Stockholm</h2>
       <p>
         The EWPC 2026 finals take place in <strong>Stockholm, Sweden</strong>,
-        August 21–24, 2026. Finalists qualify through the online round and gather
-        in the Swedish capital for the final contest, together with social events
-        and the chance to meet peers from all over Europe.
+        August 21–24, 2026. The top 20 contestants from the online qualifier
+        gather in the Swedish capital for the final contest, together with social
+        events and the chance to meet peers from all over Europe.
       </p>
       <p>
-        Practical information about the venue, travel, and accommodation will be
-        published here.
+        <strong>Travel and accommodation are provided</strong> for all finalists.
+        Practical information about the venue and travel will be published here.
       </p>
+    </div>
+  </section>
+
+  <section id="sponsors">
+    <div class="wrap">
+      <span class="section-kicker">Sponsors</span>
+      <h2>Our supporters</h2>
+      <p>
+        EWPC is made possible by the generous support of our sponsors and the
+        ICPC community.
+      </p>
+      <div class="sponsor-row">
+        <div class="sponsor-card">
+          <span class="sponsor-label">Main sponsor</span>
+          <a class="logo-link" href="https://www.janestreet.com/" rel="noopener">
+            <img src="https://www.janestreet.com/assets/logo_horizontal-16929188a56384c8e77bea91967c4553146ed7293f60a8f4f2ab6a06187881ce.svg" alt="Jane Street" loading="lazy">
+          </a>
+          <p>
+            Jane Street is a research-driven trading firm with a unique focus on
+            technology and collaborative problem solving.
+          </p>
+        </div>
+        <div class="sponsor-card dark">
+          <span class="sponsor-label">A contest in the ICPC sphere</span>
+          <a class="logo-link" href="https://icpc.global/" rel="noopener">
+            <img src="https://icpc.global/static/media/mainLogoMobile2026.273f1be9.png" alt="ICPC — International Collegiate Programming Contest" loading="lazy">
+          </a>
+          <p>
+            The International Collegiate Programming Contest — the oldest and
+            most prestigious programming contest in the world.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
