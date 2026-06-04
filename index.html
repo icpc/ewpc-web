@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EWPC 2026 — European Women's Programming Contest</title>
+<meta name="description" content="The European Women's Programming Contest (EWPC) 2026 — an individual programming contest in the ICPC sphere for women and non-binary students in Europe. Online qualifier July 4, finals August 21–24 in Stockholm, Sweden.">
+<meta property="og:title" content="EWPC 2026 — European Women's Programming Contest">
+<meta property="og:description" content="Online qualifier July 4, 2026 · Onsite finals August 21–24, 2026, Stockholm, Sweden. Open to women and non-binary students in Europe.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%231a2a6c'/%3E%3Ctext x='50' y='62' font-size='34' text-anchor='middle' fill='%23ffcc4d' font-family='Georgia,serif' font-weight='bold'%3EW%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --blue-deep: #131f54;
+    --blue: #1a2a6c;
+    --blue-mid: #2c3e8f;
+    --violet: #5b3b8c;
+    --gold: #ffcc4d;
+    --gold-deep: #e0a83a;
+    --ink: #1d2333;
+    --ink-soft: #4a5168;
+    --paper: #ffffff;
+    --paper-tint: #f4f6fb;
+    --line: #e3e7f2;
+    --radius: 14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.6;
+  }
+  h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; line-height: 1.2; }
+
+  /* ---------- Header / nav ---------- */
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(19, 31, 84, 0.96);
+    backdrop-filter: blur(6px);
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 204, 77, 0.25);
+  }
+  .nav {
+    max-width: 1060px; margin: 0 auto; padding: 0.65rem 1.25rem;
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 0.6rem;
+    font-family: Georgia, serif; font-size: 1.15rem; font-weight: bold;
+    color: #fff; text-decoration: none; letter-spacing: 0.02em;
+  }
+  .brand svg { display: block; }
+  .nav nav { margin-left: auto; display: flex; gap: 1.4rem; flex-wrap: wrap; }
+  .nav nav a {
+    color: #dfe4f7; text-decoration: none; font-size: 0.95rem; padding: 0.2rem 0;
+    border-bottom: 2px solid transparent;
+  }
+  .nav nav a:hover { color: var(--gold); border-bottom-color: var(--gold); }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    background:
+      radial-gradient(1100px 500px at 85% -10%, rgba(91, 59, 140, 0.55), transparent 60%),
+      radial-gradient(900px 420px at 10% 110%, rgba(255, 204, 77, 0.18), transparent 55%),
+      linear-gradient(160deg, var(--blue-deep) 0%, var(--blue) 55%, var(--violet) 100%);
+    color: #fff;
+    padding: 4.5rem 1.25rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-inner { max-width: 1060px; margin: 0 auto; position: relative; }
+  .hero .stars { position: absolute; right: -40px; top: -30px; opacity: 0.35; pointer-events: none; }
+  .kicker {
+    display: inline-block;
+    border: 1px solid rgba(255, 204, 77, 0.6);
+    color: var(--gold);
+    font-size: 0.8rem; letter-spacing: 0.16em; text-transform: uppercase;
+    padding: 0.3rem 0.8rem; border-radius: 999px; margin-bottom: 1.2rem;
+  }
+  .hero h1 { font-size: clamp(2.1rem, 5.5vw, 3.4rem); max-width: 18em; }
+  .hero h1 .year { color: var(--gold); }
+  .hero p.lead {
+    margin-top: 1.1rem; max-width: 44em; font-size: 1.12rem; color: #e8ebf8;
+  }
+  .fact-pills { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.8rem; }
+  .pill {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 999px;
+    padding: 0.5rem 1.05rem;
+    font-size: 0.95rem;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .pill .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); flex: none; }
+  .cta-row { margin-top: 2.2rem; display: flex; gap: 0.9rem; flex-wrap: wrap; align-items: center; }
+  .btn {
+    display: inline-block; text-decoration: none; border-radius: 10px;
+    padding: 0.75rem 1.5rem; font-weight: 600; font-size: 1rem;
+  }
+  .btn-gold { background: var(--gold); color: var(--blue-deep); }
+  .btn-gold:hover { background: var(--gold-deep); }
+  .btn-ghost { border: 1px solid rgba(255,255,255,0.5); color: #fff; }
+  .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+  .reg-note { font-size: 0.9rem; color: #c9cfeb; }
+
+  /* ---------- Sections ---------- */
+  section { padding: 3.6rem 1.25rem; }
+  section:nth-of-type(even) { background: var(--paper-tint); }
+  .wrap { max-width: 1060px; margin: 0 auto; }
+  .section-kicker {
+    color: var(--violet); font-size: 0.78rem; font-weight: 700;
+    letter-spacing: 0.18em; text-transform: uppercase;
+  }
+  section h2 { font-size: 1.9rem; margin: 0.3rem 0 1.2rem; color: var(--blue-deep); }
+  section p { max-width: 46em; color: var(--ink-soft); }
+  section p + p { margin-top: 0.9rem; }
+  section p strong { color: var(--ink); }
+
+  /* ---------- Key dates ---------- */
+  .timeline { margin-top: 2rem; display: grid; gap: 1.2rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .event {
+    background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 1.5rem 1.5rem 1.4rem; position: relative;
+    box-shadow: 0 2px 10px rgba(19, 31, 84, 0.05);
+  }
+  .event::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 5px;
+    border-radius: var(--radius) 0 0 var(--radius); background: var(--gold);
+  }
+  .event .when { font-weight: 700; color: var(--blue); font-size: 1.05rem; }
+  .event h3 { margin: 0.35rem 0 0.5rem; font-size: 1.25rem; color: var(--blue-deep); }
+  .event .where { color: var(--ink-soft); font-size: 0.95rem; }
+  .event p { font-size: 0.95rem; margin-top: 0.6rem; }
+
+  /* ---------- Eligibility cards ---------- */
+  .cards { margin-top: 2rem; display: grid; gap: 1.2rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+  .card {
+    background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 1.5rem;
+  }
+  .card .icon {
+    width: 44px; height: 44px; border-radius: 12px;
+    background: linear-gradient(150deg, var(--blue), var(--violet));
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 0.9rem;
+  }
+  .card h3 { font-size: 1.1rem; color: var(--blue-deep); margin-bottom: 0.4rem; }
+  .card p { font-size: 0.95rem; }
+  .fineprint { margin-top: 1.6rem; font-size: 0.88rem; color: var(--ink-soft); }
+
+  /* ---------- News ---------- */
+  .news-item {
+    background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 1.3rem 1.5rem; margin-top: 1.4rem;
+  }
+  .news-item .date { color: var(--violet); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.05em; }
+  .news-item h3 { font-size: 1.15rem; color: var(--blue-deep); margin: 0.25rem 0 0.35rem; }
+  .news-item p { font-size: 0.95rem; }
+
+  /* ---------- Contact / footer ---------- */
+  .contact-box {
+    margin-top: 1.6rem; display: inline-block;
+    background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 1.2rem 1.6rem;
+  }
+  .contact-box a { color: var(--blue); font-weight: 600; text-decoration: none; }
+  .contact-box a:hover { text-decoration: underline; }
+  footer {
+    background: var(--blue-deep); color: #c9cfeb;
+    padding: 2.2rem 1.25rem; font-size: 0.9rem;
+  }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center; }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  .draft-note { font-size: 0.82rem; opacity: 0.75; }
+
+  @media (max-width: 640px) {
+    .nav nav { gap: 0.9rem; font-size: 0.9rem; }
+    .hero { padding-top: 3.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="#top" aria-label="EWPC 2026 home">
+      <svg width="30" height="30" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="47" fill="none" stroke="#ffcc4d" stroke-width="5"/>
+        <text x="50" y="64" font-size="40" text-anchor="middle" fill="#ffcc4d" font-family="Georgia, serif" font-weight="bold">W</text>
+      </svg>
+      EWPC 2026
+    </a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#dates">Key dates</a>
+      <a href="#eligibility">Eligibility</a>
+      <a href="#finals">Finals</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="hero">
+    <div class="hero-inner">
+      <svg class="stars" width="420" height="420" viewBox="0 0 420 420" aria-hidden="true">
+        <g fill="#ffcc4d">
+          <path transform="translate(210,40) scale(1.1)" d="M0-12 3.5-3.7 12.5-3.7 5.3 1.9 8 10.6 0 5.4-8 10.6-5.3 1.9-12.5-3.7-3.5-3.7Z"/>
+          <path transform="translate(295,63) scale(1.1)" d="M0-12 3.5-3.7 12.5-3.7 5.3 1.9 8 10.6 0 5.4-8 10.6-5.3 1.9-12.5-3.7-3.5-3.7Z"/>
+          <path transform="translate(357,125) scale(1.1)" d="M0-12 3.5-3.7 12.5-3.7 5.3 1.9 8 10.6 0 5.4-8 10.6-5.3 1.9-12.5-3.7-3.5-3.7Z"/>
+          <path transform="translate(380,210) scale(1.1)" d="M0-12 3.5-3.7 12.5-3.7 5.3 1.9 8 10.6 0 5.4-8 10.6-5.3 1.9-12.5-3.7-3.5-3.7Z"/>
+          <path transform="translate(357,295) scale(1.1)" d="M0-12 3.5-3.7 12.5-3.7 5.3 1.9 8 10.6 0 5.4-8 10.6-5.3 1.9-12.5-3.7-3.5-3.7Z"/>
+          <path transform="translate(295,357) scale(1.1)" d="M0-12 3.5-3.7 12.5-3.7 5.3 1.9 8 10.6 0 5.4-8 10.6-5.3 1.9-12.5-3.7-3.5-3.7Z"/>
+          <path transform="translate(210,380) scale(1.1)" d="M0-12 3.5-3.7 12.5-3.7 5.3 1.9 8 10.6 0 5.4-8 10.6-5.3 1.9-12.5-3.7-3.5-3.7Z"/>
+          <path transform="translate(125,357) scale(1.1)" d="M0-12 3.5-3.7 12.5-3.7 5.3 1.9 8 10.6 0 5.4-8 10.6-5.3 1.9-12.5-3.7-3.5-3.7Z"/>
+          <path transform="translate(63,295) scale(1.1)" d="M0-12 3.5-3.7 12.5-3.7 5.3 1.9 8 10.6 0 5.4-8 10.6-5.3 1.9-12.5-3.7-3.5-3.7Z"/>
+          <path transform="translate(40,210) scale(1.1)" d="M0-12 3.5-3.7 12.5-3.7 5.3 1.9 8 10.6 0 5.4-8 10.6-5.3 1.9-12.5-3.7-3.5-3.7Z"/>
+          <path transform="translate(63,125) scale(1.1)" d="M0-12 3.5-3.7 12.5-3.7 5.3 1.9 8 10.6 0 5.4-8 10.6-5.3 1.9-12.5-3.7-3.5-3.7Z"/>
+          <path transform="translate(125,63) scale(1.1)" d="M0-12 3.5-3.7 12.5-3.7 5.3 1.9 8 10.6 0 5.4-8 10.6-5.3 1.9-12.5-3.7-3.5-3.7Z"/>
+        </g>
+      </svg>
+
+      <span class="kicker">A contest in the ICPC sphere</span>
+      <h1>European Women's Programming Contest <span class="year">2026</span></h1>
+      <p class="lead">
+        An individual algorithmic programming contest for women and non-binary students
+        across Europe — compete online in the qualifier, then meet on site for the
+        finals in Stockholm.
+      </p>
+      <div class="fact-pills">
+        <div class="pill"><span class="dot"></span>Online qualifier · Saturday, July 4, 2026</div>
+        <div class="pill"><span class="dot"></span>Onsite finals · August 21–24, 2026</div>
+        <div class="pill"><span class="dot"></span>Stockholm, Sweden</div>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-gold" href="#news">Registration opens soon</a>
+        <a class="btn btn-ghost" href="#about">Learn more</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <span class="section-kicker">About</span>
+      <h2>What is EWPC?</h2>
+      <p>
+        The <strong>European Women's Programming Contest (EWPC)</strong> is an
+        <strong>individual</strong> competitive programming contest in the
+        <a href="https://icpc.global/" style="color: var(--blue);">ICPC</a> sphere.
+        Contestants solve algorithmic problems against the clock — reading a problem,
+        designing an efficient solution, and implementing it in code that is judged
+        automatically.
+      </p>
+      <p>
+        EWPC 2026 is the first edition of the contest. It is open to women and
+        non-binary students at secondary and tertiary schools across Europe, and is
+        designed to welcome newcomers and challenge experienced competitors alike.
+      </p>
+      <p>
+        The contest has two stages: an <strong>online qualifier</strong> on July 4,
+        2026, which anyone eligible can join from anywhere, and the
+        <strong>onsite finals</strong> in Stockholm, Sweden on August 21–24, 2026,
+        to which the top contestants from the qualifier are invited.
+      </p>
+    </div>
+  </section>
+
+  <section id="dates">
+    <div class="wrap">
+      <span class="section-kicker">Schedule</span>
+      <h2>Key dates</h2>
+      <div class="timeline">
+        <div class="event">
+          <div class="when">Saturday, July 4, 2026</div>
+          <h3>Online qualifier</h3>
+          <div class="where">Online — compete from anywhere in Europe</div>
+          <p>
+            An individual online round open to all eligible students. Results
+            determine who advances to the onsite finals.
+          </p>
+        </div>
+        <div class="event">
+          <div class="when">August 21–24, 2026</div>
+          <h3>Onsite finals</h3>
+          <div class="where">Stockholm, Sweden</div>
+          <p>
+            Four days of competition and community: the final contest round,
+            plus social activities with fellow contestants from across Europe.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="eligibility">
+    <div class="wrap">
+      <span class="section-kicker">Who can compete</span>
+      <h2>Eligibility</h2>
+      <p>EWPC 2026 is open to contestants who meet all three of the following:</p>
+      <div class="cards">
+        <div class="card">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffcc4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="8" r="5"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/>
+            </svg>
+          </div>
+          <h3>Women &amp; non-binary</h3>
+          <p>The contest is open to all women and non-binary people.</p>
+        </div>
+        <div class="card">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffcc4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/>
+            </svg>
+          </div>
+          <h3>Students</h3>
+          <p>Enrolled at a secondary school (e.g. high school) or tertiary school (e.g. university or college).</p>
+        </div>
+        <div class="card">
+          <div class="icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffcc4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2c3 3 4 6.5 4 10s-1 7-4 10c-3-3-4-6.5-4-10s1-7 4-10z"/>
+            </svg>
+          </div>
+          <h3>In Europe</h3>
+          <p>Studying in Europe, as defined by the ICPC region of Europe.</p>
+        </div>
+      </div>
+      <p class="fineprint">
+        Detailed rules and the full eligibility criteria will be published before
+        registration opens.
+      </p>
+    </div>
+  </section>
+
+  <section id="finals">
+    <div class="wrap">
+      <span class="section-kicker">Host city</span>
+      <h2>Finals in Stockholm</h2>
+      <p>
+        The EWPC 2026 finals take place in <strong>Stockholm, Sweden</strong>,
+        August 21–24, 2026. Finalists qualify through the online round and gather
+        in the Swedish capital for the final contest, together with social events
+        and the chance to meet peers from all over Europe.
+      </p>
+      <p>
+        Practical information about the venue, travel, and accommodation will be
+        published here.
+      </p>
+    </div>
+  </section>
+
+  <section id="news">
+    <div class="wrap">
+      <span class="section-kicker">News</span>
+      <h2>Latest updates</h2>
+      <div class="news-item">
+        <div class="date">2026-06-04</div>
+        <h3>Announcing EWPC 2026</h3>
+        <p>
+          The first European Women's Programming Contest will be held in 2026:
+          online qualifier on July 4, and onsite finals in Stockholm, Sweden on
+          August 21–24. Registration details will be announced here soon — watch
+          this space!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <span class="section-kicker">Get in touch</span>
+      <h2>Contact</h2>
+      <p>
+        Questions about the contest, eligibility, or how to get involved?
+        We'd love to hear from you.
+      </p>
+      <div class="contact-box">
+        ✉️ <a href="mailto:fredrik@icpc.global">fredrik@icpc.global</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 European Women's Programming Contest · A contest in the <a href="https://icpc.global/">ICPC</a> sphere</div>
+    <div class="draft-note">Details on this page are preliminary and subject to change.</div>
+  </div>
+</footer>
+
+</body>
+</html>
