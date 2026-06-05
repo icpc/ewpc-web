@@ -8,6 +8,9 @@
 <meta property="og:title" content="EWPC 2026 — European Women's Programming Contest">
 <meta property="og:description" content="Online qualifier July 4, 2026 · Onsite finals August 21–24, 2026, Stockholm, Sweden. Open to women and non-binary students in Europe.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://icpc.io/ewpc-web/">
+<meta property="og:image" content="https://icpc.io/ewpc-web/assets/ewpc-og.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/ewpc-icon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="assets/favicon-32.png" type="image/png">
 <style>
@@ -166,6 +169,17 @@
   .map-legend .sw-x { background: #dfe3ee; }
   .map-note { font-size: 0.82rem; color: var(--ink-soft); margin-top: 0.7rem; }
 
+  /* ---------- FAQ ---------- */
+  .faq { margin-top: 1.6rem; max-width: 46em; }
+  .faq details {
+    background: var(--paper); border: 1px solid var(--line); border-radius: 10px;
+    padding: 0.85rem 1.2rem; margin-top: 0.7rem;
+  }
+  .faq summary { font-weight: 600; color: var(--blue-deep); cursor: pointer; }
+  .faq details p { margin-top: 0.6rem; font-size: 0.95rem; }
+  .sched { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .org-cards { grid-template-columns: repeat(auto-fit, minmax(250px, 280px)); }
+
   /* ---------- News ---------- */
   .news-item {
     background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
@@ -236,11 +250,12 @@
     </a>
     <nav aria-label="Main">
       <a href="#about">About</a>
-      <a href="#dates">Key dates</a>
+      <a href="#contest">Contest</a>
+      <a href="#dates">Dates</a>
       <a href="#eligibility">Eligibility</a>
       <a href="#finals">Finals</a>
-      <a href="#sponsors">Sponsors</a>
-      <a href="#news">News</a>
+      <a href="#register">Register</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -280,7 +295,8 @@
         <div class="pill"><span class="dot"></span>Stockholm, Sweden</div>
       </div>
       <div class="cta-row">
-        <a class="btn btn-gold" href="#news">Registration opens soon</a>
+        <a class="btn btn-gold" href="#register">Registration opens soon</a>
+        <span class="reg-note">Free of charge · on icpc.global</span>
         <a class="btn btn-ghost" href="#about">Learn more</a>
       </div>
     </div>
@@ -323,6 +339,47 @@
         to which the top 20 contestants from the qualifier are invited — with
         travel and accommodation provided.
       </p>
+      <p>
+        EWPC exists to inspire, promote, and celebrate exceptional women in
+        algorithmic problem solving — strengthening the pipeline of women in
+        competitive programming and supporting their growth in software
+        engineering and computer science research, while building a strong,
+        lasting European contest community.
+      </p>
+    </div>
+  </section>
+
+  <section id="contest">
+    <div class="wrap">
+      <span class="section-kicker">Format</span>
+      <h2>The contest</h2>
+      <p>
+        EWPC follows <strong>standard ICPC rules</strong>, but is an
+        <strong>individual</strong> contest: you compete alone, against the
+        clock, on a set of algorithmic problems. Submissions are judged
+        pass/fail, and contestants are ranked by number of problems solved,
+        with ties broken by total time — plus a 20-minute penalty for each
+        incorrect submission on a problem you eventually solve.
+      </p>
+      <div class="cards">
+        <div class="card">
+          <h3>Two rounds</h3>
+          <p>A 3-hour online qualifier with roughly eight problems, followed by
+          a single 4-hour final round, also around eight problems, onsite in
+          Stockholm.</p>
+        </div>
+        <div class="card">
+          <h3>Judged on Kattis</h3>
+          <p>All submissions run on the <a href="https://www.kattis.com/" style="color: var(--blue);">Kattis</a>
+          judging system, with its large set of programming languages —
+          C++, Python, Java, and many more.</p>
+        </div>
+        <div class="card">
+          <h3>Your own work</h3>
+          <p>No external help and no AI assistance: solutions must be entirely
+          your own. Full rules will be published before the qualifier.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -336,8 +393,8 @@
           <h3>Online qualifier</h3>
           <div class="where">Online — compete from anywhere in Europe</div>
           <p>
-            An individual online round open to all eligible students. The top 20
-            contestants are invited to the onsite finals.
+            A 3-hour individual online round of roughly eight problems, open to
+            all eligible students. The top 20 are invited to the onsite finals.
           </p>
         </div>
         <div class="event">
@@ -345,9 +402,9 @@
           <h3>Onsite finals</h3>
           <div class="where">Stockholm, Sweden</div>
           <p>
-            Four days of competition and community for the 20 finalists: the
-            final contest round, plus social activities with fellow contestants
-            from across Europe. Travel and accommodation are provided.
+            Four days of competition and community for the 20 finalists,
+            centered on a single 4-hour final round. Travel and accommodation
+            are provided.
           </p>
         </div>
       </div>
@@ -485,7 +542,127 @@
       </p>
       <p>
         <strong>Travel and accommodation are provided</strong> for all finalists.
-        Practical information about the venue and travel will be published here.
+        The venue, in central Stockholm, will be announced here.
+      </p>
+      <div class="timeline sched">
+        <div class="event">
+          <div class="when">Friday, August 21</div>
+          <h3>Arrival</h3>
+          <p>Arrivals, check-in, and an informal welcome dinner.</p>
+        </div>
+        <div class="event">
+          <div class="when">Saturday, August 22</div>
+          <h3>Opening day</h3>
+          <p>Opening ceremony and practice contest, then an excursion and
+          group dinner.</p>
+        </div>
+        <div class="event">
+          <div class="when">Sunday, August 23</div>
+          <h3>Contest &amp; awards</h3>
+          <p>The 4-hour EWPC final, followed by the awards ceremony and
+          closing banquet.</p>
+        </div>
+        <div class="event">
+          <div class="when">Monday, August 24</div>
+          <h3>Departure</h3>
+          <p>Check-out and journeys home.</p>
+        </div>
+      </div>
+      <p class="fineprint">Preliminary program — details may change.</p>
+    </div>
+  </section>
+
+  <section id="register">
+    <div class="wrap">
+      <span class="section-kicker">Take part</span>
+      <h2>Registration</h2>
+      <p>
+        Registration opens later this month and is <strong>free of charge</strong>.
+        It will run on the <a href="https://icpc.global/" style="color: var(--blue);">icpc.global</a>
+        system — the same platform used by ICPC contests worldwide — and the
+        exact opening date will be announced here and in the news section.
+      </p>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <span class="section-kicker">Questions</span>
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details>
+          <summary>Do I compete in a team?</summary>
+          <p>No — unlike classic ICPC team contests, EWPC is an individual
+          contest. You compete on your own, in both the qualifier and the
+          final.</p>
+        </details>
+        <details>
+          <summary>Who can compete?</summary>
+          <p>All women and non-binary students enrolled at a secondary school
+          (e.g. high school) or tertiary school (e.g. university or college) in
+          the ICPC Europe region — see the eligibility section and map above.</p>
+        </details>
+        <details>
+          <summary>What does it cost?</summary>
+          <p>Nothing. Registration is free, and finalists' travel to and
+          accommodation in Stockholm are covered by the contest.</p>
+        </details>
+        <details>
+          <summary>Which programming languages can I use?</summary>
+          <p>The contest runs on Kattis, which supports a large number of
+          languages — including C++, Python, Java, and many more.</p>
+        </details>
+        <details>
+          <summary>How does the scoring work?</summary>
+          <p>Standard ICPC rules: each problem is judged pass/fail. Contestants
+          are ranked by number of problems solved; ties are broken by total
+          time, with a 20-minute penalty added for each incorrect submission on
+          a problem that is eventually solved.</p>
+        </details>
+        <details>
+          <summary>Can I use AI tools or get outside help?</summary>
+          <p>No. Solutions must be entirely your own work — no external help
+          and no AI assistance, in the qualifier as well as the final.</p>
+        </details>
+        <details>
+          <summary>How do I reach the finals in Stockholm?</summary>
+          <p>Place in the top 20 of the online qualifier on July 4. All 20
+          finalists are invited to the onsite finals, expenses paid.</p>
+        </details>
+        <details>
+          <summary>I'm new to competitive programming — is EWPC for me?</summary>
+          <p>Yes! EWPC is designed to welcome newcomers as well as challenge
+          experienced contestants. A good way to prepare is to solve problems
+          on <a href="https://open.kattis.com/" style="color: var(--blue);">open.kattis.com</a>,
+          the same platform the contest uses.</p>
+        </details>
+        <details>
+          <summary>I need a visa to travel to Sweden — can you help?</summary>
+          <p>Yes. If you qualify for the finals and need a visa, contact us and
+          we will help with invitation letters and documentation.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="organizers">
+    <div class="wrap">
+      <span class="section-kicker">The team</span>
+      <h2>Organizers</h2>
+      <div class="cards org-cards">
+        <div class="card">
+          <h3>Fredrik Niemelä</h3>
+          <p>Contest director</p>
+        </div>
+        <div class="card">
+          <h3>Arnar Bjarni Arnarson</h3>
+          <p>Head judge</p>
+        </div>
+      </div>
+      <p style="margin-top: 1.4rem;">
+        Organizing committee: Mikael Renström, Maddy Wang Renström, Veronika
+        Soboleva, Joshua Andersson, Lotte Lakeman, Giovanna Kobus Conrado, and
+        Thomas Verwoerd — with more to come.
       </p>
     </div>
   </section>
@@ -516,6 +693,17 @@
     <div class="wrap">
       <span class="section-kicker">News</span>
       <h2>Latest updates</h2>
+      <div class="news-item">
+        <div class="date">2026-06-05</div>
+        <h3>Format and registration details</h3>
+        <p>
+          EWPC is an individual contest under standard ICPC rules, judged on
+          Kattis: a 3-hour online qualifier on July 4, and a single 4-hour
+          final in Stockholm for the top 20. Registration will be free of
+          charge and will run on the icpc.global system — opening date to be
+          announced shortly.
+        </p>
+      </div>
       <div class="news-item">
         <div class="date">2026-06-04</div>
         <h3>Announcing EWPC 2026</h3>
