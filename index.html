@@ -108,6 +108,15 @@
   .btn-ghost { border: 1px solid rgba(255,255,255,0.5); color: #fff; }
   .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
   .reg-note { font-size: 0.9rem; color: #c9cfeb; }
+  .hero-sponsor {
+    margin-top: 2.4rem;
+    display: inline-flex; flex-direction: column; align-items: flex-start; gap: 0.7rem;
+  }
+  .hero-sponsor .hero-sponsor-label {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--gold);
+  }
+  .hero-sponsor img { height: 104px; width: auto; display: block; }
 
   /* ---------- Sections ---------- */
   section { padding: 3.6rem 1.25rem; }
@@ -298,6 +307,12 @@
         <a class="btn btn-gold" href="https://ewpc26.kattis.com/contests/ewpc26qual/join" target="_blank" rel="noopener">Register</a>
         <span class="reg-note">Free · online qualifier July 4</span>
         <a class="btn btn-ghost" href="#about">Learn more</a>
+      </div>
+      <div class="hero-sponsor">
+        <span class="hero-sponsor-label">ICPC Titanium Sponsor</span>
+        <a href="https://www.janestreet.com/" rel="noopener" aria-label="Jane Street — ICPC Titanium Sponsor">
+          <img src="assets/jane-street-titanium-ondark.svg" alt="Jane Street — Titanium Sponsor" width="148" height="122">
+        </a>
       </div>
     </div>
   </div>
@@ -684,9 +699,9 @@
       </p>
       <div class="sponsor-row">
         <div class="sponsor-card">
-          <span class="sponsor-label">Main sponsor</span>
+          <span class="sponsor-label">ICPC Titanium Sponsor</span>
           <a class="logo-link" href="https://www.janestreet.com/" rel="noopener">
-            <img src="https://www.janestreet.com/assets/logo_horizontal-16929188a56384c8e77bea91967c4553146ed7293f60a8f4f2ab6a06187881ce.svg" alt="Jane Street" loading="lazy">
+            <img src="assets/jane-street-titanium.svg" alt="Jane Street — Titanium Sponsor" loading="lazy" style="max-height: 110px;">
           </a>
           <p>
             Jane Street is a research-driven trading firm with a unique focus on
